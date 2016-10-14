@@ -1,11 +1,11 @@
 require 'date'
+
 # As a developer, I can create a Task.
 
 class Task < TaskList
 
   #Every new task has a default title
-  def initialize(year, month, date)
-    super
+  def initialize
     @title = "New Task"
     @description = "Describe your task here"
     @done = false

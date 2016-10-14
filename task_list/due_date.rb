@@ -6,7 +6,13 @@ class DueDateTask < Task
   #Task.new(month, day, year)
   #Ruby date class: formatting due date arguments, making them look nice
   def initialize(year, month, day)
-    super
+    @title = "New Task"
+    @description = "Describe your task here"
+    @done = false
+    @month = month
+    @day = day
+    @year = year
+    @due_date = Date.new(@year, @month, @day)
   end
 
   #Returns the month when this task is due.
@@ -28,5 +34,8 @@ class DueDateTask < Task
   def due_date
     @due_date
   end
+
+
+
 
 end
